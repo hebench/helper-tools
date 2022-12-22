@@ -1,0 +1,571 @@
+# HEBench auto-generated benchmark selection and configuration file.
+# 
+# Generated from backend: 
+#   "libhebench_seal_backend.so"
+# 
+# Only benchmarks with their workload parameters specified here will run when
+# this configuration file is used with Test Harness. This configuration only
+# works for the backend used to generate this file (the backend).
+# 
+# Benchmark "ID" represents workload and benchmark descriptor options for the
+# backend. Benchmark "params" are the configurable workload parameters.
+# 
+# To use this file do any of the following:
+#   - Add or remove benchmarks based on pre-existing configurations.
+#   - Modify the configuration and workload parameters for existing or added
+#     benchmarks.
+# 
+# Global configuration values, if present, are used when local values are not
+# specified per benchmark.
+# 
+# When adding new benchmarks:
+#   The only benchmark IDs supported are those already existing in this
+#   auto-generated file as reported by the backend. Any new benchmark added
+#   must have the same number of workload parameters as those already existing
+#   in this auto-generated file with the same benchmark ID.
+# 
+# When modifying workload parameters:
+#   Number of workload parameters, their type and name must match those of any
+#   auto-generated benchmark with the same ID.
+#   Refer to workload and backend specifications for supported range of values
+#   for each workload parameter. Invalid values will cause the benchmark to
+#   fail during execution.
+# 
+
+
+# Default minimum test time in milliseconds. Latency tests specifying
+# default test time and Offline tests will be repeated until this time
+# has elapsed. Defaults to 0 if not present (Latency executes twice,
+# Offline executes once).
+default_min_test_time: $HEBENCH_MIN_TEST_TIME
+
+# Default sample size to use for operation parameters that support
+# variable sample size in Offline category. Defaults to benchmark
+# specific if not present.
+default_sample_size: 0
+
+# Default report time unit to use for overall report output. This will be used
+# as fallback if no benchmark specific time unit is specified. If this is
+# missing or null, time units default behavior is to use the variable scale
+# that best matches the benchmark results.
+# Possible values:
+#   null:   default time scale
+#   "s":  seconds
+#   "ms": milliseconds
+#   "us": microseconds
+#   "ns": nanoseconds
+report_time_unit: us
+
+# Random seed to use when generating synthetic data for these benchmarks.
+# Type: unsigned int. Defaults to system time when not present.
+random_seed: $HEBENCH_RAND_SEED
+
+
+benchmark:
+
+# Benchmark with workload parameters:
+#   Element-wise Addition 1000
+# Descriptor:
+#   wp_1000_8192_2_40_20_0 | offline | int64 | default | all_cipher | bfv | 128_bits | 0
+  # - ID: 2
+    # default_min_test_time: 0
+    # default_sample_sizes:
+      # 0: 0
+      # 1: 0
+    # params:
+      # 0:
+        # name: n
+        # type: UInt64
+        # value:
+          # from: 8064
+          # to: 8064
+          # step: 0
+      # 1:
+        # name: PolyModulusDegree
+        # type: UInt64
+        # value:
+          # from: 8192
+          # to: 8192
+          # step: 0
+      # 2:
+        # name: MultiplicativeDepth
+        # type: UInt64
+        # value:
+          # from: 2
+          # to: 2
+          # step: 0
+      # 3:
+        # name: CoefficientModulusBits
+        # type: UInt64
+        # value:
+          # from: 40
+          # to: 40
+          # step: 0
+      # 4:
+        # name: PlainModulusBits
+        # type: UInt64
+        # value:
+          # from: 20
+          # to: 20
+          # step: 0
+      # 5:
+        # name: NumThreads
+        # type: UInt64
+        # value:
+          # from: 1
+          # to: 36
+          # step: 1
+
+# # Benchmark with workload parameters:
+# #   Element-wise Addition 1000
+# # Descriptor:
+# #   wp_1000_8192_2_45_45_0 | offline | float64 | default | all_cipher | ckks | 128_bits | 0
+  # - ID: 3
+    # default_min_test_time: 0
+    # default_sample_sizes:
+      # 0: 0
+      # 1: 0
+    # params:
+      # 0:
+        # name: n
+        # type: UInt64
+        # value:
+          # from: 3456
+          # to: 3456
+          # step: 0
+      # 1:
+        # name: PolyModulusDegree
+        # type: UInt64
+        # value:
+          # from: 8192
+          # to: 8192
+          # step: 0
+      # 2:
+        # name: MultiplicativeDepth
+        # type: UInt64
+        # value:
+          # from: 2
+          # to: 2
+          # step: 0
+      # 3:
+        # name: CoefficientModulusBits
+        # type: UInt64
+        # value:
+          # from: 45
+          # to: 45
+          # step: 0
+      # 4:
+        # name: ScaleBits
+        # type: UInt64
+        # value:
+          # from: 45
+          # to: 45
+          # step: 0
+      # 5:
+        # name: NumThreads
+        # type: UInt64
+        # value:
+          # from: 1
+          # to: 36
+          # step: 1
+
+# # Benchmark with workload parameters:
+# #   Element-wise Multiplication 1000
+# # Descriptor:
+# #   wp_1000_8192_2_40_20_0 | offline | int64 | default | all_cipher | bfv | 128_bits | 0
+  # - ID: 6
+    # default_min_test_time: 0
+    # default_sample_sizes:
+      # 0: 0
+      # 1: 0
+    # params:
+      # 0:
+        # name: n
+        # type: UInt64
+        # value:
+          # from: 8064
+          # to: 8064
+          # step: 0
+      # 1:
+        # name: PolyModulusDegree
+        # type: UInt64
+        # value:
+          # from: 8192
+          # to: 8192
+          # step: 0
+      # 2:
+        # name: MultiplicativeDepth
+        # type: UInt64
+        # value:
+          # from: 2
+          # to: 2
+          # step: 0
+      # 3:
+        # name: CoefficientModulusBits
+        # type: UInt64
+        # value:
+          # from: 40
+          # to: 40
+          # step: 0
+      # 4:
+        # name: PlainModulusBits
+        # type: UInt64
+        # value:
+          # from: 20
+          # to: 20
+          # step: 0
+      # 5:
+        # name: NumThreads
+        # type: UInt64
+        # value:
+          # from: 1
+          # to: 36
+          # step: 1
+
+# # Benchmark with workload parameters:
+# #   Element-wise Multiplication 1000
+# # Descriptor:
+# #   wp_1000_8192_2_45_45_0 | offline | float64 | default | all_cipher | ckks | 128_bits | 0
+  - ID: 7
+    default_min_test_time: 0
+    default_sample_sizes:
+      0: 0
+      1: 0
+    params:
+      0:
+        name: n
+        type: UInt64
+        value:
+          from: 3456
+          to: 3456
+          step: 0
+      1:
+        name: PolyModulusDegree
+        type: UInt64
+        value:
+          from: $HEBENCH_POLYMOD_DEGREE
+          to: $HEBENCH_POLYMOD_DEGREE
+          step: 0
+      2:
+        name: MultiplicativeDepth
+        type: UInt64
+        value:
+          from: 2
+          to: 2
+          step: 0
+      3:
+        name: CoefficientModulusBits
+        type: UInt64
+        value:
+          from: $HEBENCH_COEFF_MOD_BITS
+          to: $HEBENCH_COEFF_MOD_BITS
+          step: 0
+      4:
+        name: ScaleBits
+        type: UInt64
+        value:
+          from: 45
+          to: 45
+          step: 0
+      5:
+        name: NumThreads
+        type: UInt64
+        value:
+          from: $HEBENCH_MIN_NUM_THREADS
+          to: $HEBENCH_MAX_NUM_THREADS
+          step: $HEBENCH_THREAD_STEP
+
+# # Benchmark with workload parameters:
+# #   Dot Product 100
+# # Descriptor:
+# #   wp_100_8192_2_45_20_0 | offline | int64 | default | all_cipher | bfv | 128_bits | 0
+  # - ID: 10
+    # default_min_test_time: 0
+    # default_sample_sizes:
+      # 0: 0
+      # 1: 0
+    # params:
+      # 0:
+        # name: n
+        # type: UInt64
+        # value:
+          # from: 8064
+          # to: 8064
+          # step: 0
+      # 1:
+        # name: PolyModulusDegree
+        # type: UInt64
+        # value:
+          # from: 8192
+          # to: 8192
+          # step: 0
+      # 2:
+        # name: MultiplicativeDepth
+        # type: UInt64
+        # value:
+          # from: 2
+          # to: 2
+          # step: 0
+      # 3:
+        # name: CoefficientModulusBits
+        # type: UInt64
+        # value:
+          # from: 45
+          # to: 45
+          # step: 0
+      # 4:
+        # name: PlainModulusBits
+        # type: UInt64
+        # value:
+          # from: 20
+          # to: 20
+          # step: 0
+      # 5:
+        # name: NumThreads
+        # type: UInt64
+        # value:
+          # from: 1
+          # to: 36
+          # step: 1
+
+# # Benchmark with workload parameters:
+# #   Dot Product 100
+# # Descriptor:
+# #   wp_100_8192_2_40_40_0 | offline | float64 | default | all_cipher | ckks | 128_bits | 0
+  # - ID: 11
+    # default_min_test_time: 0
+    # default_sample_sizes:
+      # 0: 0
+      # 1: 0
+    # params:
+      # 0:
+        # name: n
+        # type: UInt64
+        # value:
+          # from: 3456
+          # to: 3456
+          # step: 0
+      # 1:
+        # name: PolyModulusDegree
+        # type: UInt64
+        # value:
+          # from: 8192
+          # to: 8192
+          # step: 0
+      # 2:
+        # name: MultiplicativeDepth
+        # type: UInt64
+        # value:
+          # from: 2
+          # to: 2
+          # step: 0
+      # 3:
+        # name: CoefficientModulusBits
+        # type: UInt64
+        # value:
+          # from: 40
+          # to: 40
+          # step: 0
+      # 4:
+        # name: ScaleBits
+        # type: UInt64
+        # value:
+          # from: 40
+          # to: 40
+          # step: 0
+      # 5:
+        # name: NumThreads
+        # type: UInt64
+        # value:
+          # from: 1
+          # to: 36
+          # step: 1
+
+# # Benchmark with workload parameters:
+# #   Matrix Multiplication (10x9) x (9x8)
+# # Descriptor:
+# #   wp_10_9_8_8192_2_40_20_0 | latency | int64 | 01 | all_cipher | bfv | 128_bits | 0
+  # - ID: 14
+    # default_min_test_time: 0
+    # default_sample_sizes:
+      # 0: 0
+      # 1: 0
+    # params:
+      # 0:
+        # name: rows_M0
+        # type: UInt64
+        # value:
+          # from: 8192
+          # to: 8192
+          # step: 0
+      # 1:
+        # name: cols_M0
+        # type: UInt64
+        # value:
+          # from: 100
+          # to: 100
+          # step: 0
+      # 2:
+        # name: cols_M1
+        # type: UInt64
+        # value:
+          # from: 10
+          # to: 10
+          # step: 0
+      # 3:
+        # name: PolyModulusDegree
+        # type: UInt64
+        # value:
+          # from: 8192
+          # to: 8192
+          # step: 0
+      # 4:
+        # name: MultiplicativeDepth
+        # type: UInt64
+        # value:
+          # from: 2
+          # to: 2
+          # step: 0
+      # 5:
+        # name: CoefficientModulusBits
+        # type: UInt64
+        # value:
+          # from: 40
+          # to: 40
+          # step: 0
+      # 6:
+        # name: PlainModulusBits
+        # type: UInt64
+        # value:
+          # from: 20
+          # to: 20
+          # step: 0
+      # 7:
+        # name: NumThreads
+        # type: UInt64
+        # value:
+          # from: 1
+          # to: 36
+          # step: 1
+
+# # Benchmark with workload parameters:
+# #   Matrix Multiplication (10x9) x (9x8)
+# # Descriptor:
+# #   wp_10_9_8_8192_2_45_45_0 | latency | float64 | 01 | all_cipher | ckks | 128_bits | 0
+  # - ID: 15
+    # default_min_test_time: 0
+    # default_sample_sizes:
+      # 0: 0
+      # 1: 0
+    # params:
+      # 0:
+        # name: rows_M0
+        # type: UInt64
+        # value:
+          # from: 8192
+          # to: 8192
+          # step: 0
+      # 1:
+        # name: cols_M0
+        # type: UInt64
+        # value:
+          # from: 100
+          # to: 100
+          # step: 0
+      # 2:
+        # name: cols_M1
+        # type: UInt64
+        # value:
+          # from: 10
+          # to: 10
+          # step: 0
+      # 3:
+        # name: PolyModulusDegree
+        # type: UInt64
+        # value:
+          # from: 8192
+          # to: 8192
+          # step: 0
+      # 4:
+        # name: MultiplicativeDepth
+        # type: UInt64
+        # value:
+          # from: 2
+          # to: 2
+          # step: 0
+      # 5:
+        # name: CoefficientMudulusBits
+        # type: UInt64
+        # value:
+          # from: 45
+          # to: 45
+          # step: 0
+      # 6:
+        # name: ScaleBits
+        # type: UInt64
+        # value:
+          # from: 45
+          # to: 45
+          # step: 0
+      # 7:
+        # name: NumThreads
+        # type: UInt64
+        # value:
+          # from: 1
+          # to: 36
+          # step: 1
+
+# # Benchmark with workload parameters:
+# #   Logistic Regression PolyD3 16 features
+# # Descriptor:
+# #   wp_16_16384_6_45_45_0 | offline | float64 | 1120 | all_cipher | ckks | 128_bits | 1
+  # - ID: 19
+    # default_min_test_time: 0
+    # default_sample_sizes:
+      # 0: 0
+      # 1: 0
+      # 2: 1152
+    # params:
+      # 0:
+        # name: n
+        # type: UInt64
+        # value:
+          # from: 242
+          # to: 242
+          # step: 0
+      # 1:
+        # name: PolyModulusDegree
+        # type: UInt64
+        # value:
+          # from: 16384
+          # to: 16384
+          # step: 0
+      # 2:
+        # name: MultiplicativeDepth
+        # type: UInt64
+        # value:
+          # from: 6
+          # to: 6
+          # step: 0
+      # 3:
+        # name: CoefficientModulusBits
+        # type: UInt64
+        # value:
+          # from: 45
+          # to: 45
+          # step: 0
+      # 4:
+        # name: ScaleBits
+        # type: UInt64
+        # value:
+          # from: 45
+          # to: 45
+          # step: 0
+      # 5:
+        # name: NumThreads
+        # type: UInt64
+        # value:
+          # from: 1
+          # to: 36
+          # step: 1
+
